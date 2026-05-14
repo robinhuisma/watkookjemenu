@@ -12,6 +12,9 @@
       <a href="{{ .Site.Params.lemonSqueezyURL }}" class="cta-button">
         Download direct &mdash; &euro;{{ .Site.Params.price }}
       </a>
+      <a href="#" class="cta-button-secondary" data-flipbook-trigger>
+        Lees een proef &rarr;
+      </a>
       <p class="cta-meta">PDF + online flipbook &middot; Meteen beschikbaar</p>
     </div>
   </div>
@@ -32,8 +35,8 @@
         <p>Korte bereiding. Heldere stappen. Minder nadenken, meer genieten.</p>
       </div>
       <div class="feature fade-in">
-        <h3>40+ recepten voor elke dag.</h3>
-        <p>Ontbijt, lunch en diner. Licht, voedzaam en flexibel genoeg om met je dag mee te bewegen.</p>
+        <h3>47 recepten voor elke dag.</h3>
+        <p>14 ontbijten, 14 lunches, 19 diners. Licht, voedzaam en flexibel genoeg om met je dag mee te bewegen.</p>
       </div>
       <div class="feature fade-in">
         <h3>Echte ingredi&euml;nten.</h3>
@@ -110,6 +113,56 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
 }, { threshold: 0.15 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<!-- FLIPBOOK MODAL -->
+<div id="flipbook-modal" class="flipbook-modal" hidden>
+  <button class="flipbook-close" aria-label="Sluiten" data-flipbook-close>&times;</button>
+  <div class="flipbook-frame">
+    <iframe
+      id="flipbook-iframe"
+      src=""
+      allowfullscreen="allowfullscreen"
+      allow="clipboard-write"
+      scrolling="no"
+      title="Preview Wat kook je me nu?"
+    ></iframe>
+  </div>
+</div>
+
+<script>
+(function() {
+  var modal = document.getElementById('flipbook-modal');
+  var iframe = document.getElementById('flipbook-iframe');
+  var url = "{{ .Site.Params.previewFlipbookURL }}";
+
+  document.querySelectorAll('[data-flipbook-trigger]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      iframe.src = url;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    modal.hidden = true;
+    iframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-flipbook-close]').forEach(function(el) {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+})();
 </script>
 
 {{ end }}

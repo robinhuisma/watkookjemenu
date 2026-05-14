@@ -10,6 +10,8 @@ params:
   bookClaim: "Snelle recepten. Pure ingredienten. Veel smaak. Zonder ingewikkeld koken of eindeloos plannen."
   lemonSqueezyURL: "#koop"
   price: "14,95"
+  previewFlipbookURL: "https://heyzine.com/flip-book/f8058fe955.html"
+  recipeCount: 47
 
 markup:
   goldmark:

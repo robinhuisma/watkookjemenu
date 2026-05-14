@@ -313,6 +313,70 @@ a { color: #ebebeb; }
 }
 .site-footer a { color: #888; }
 
+/* SECONDARY CTA */
+.cta-button-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #ebebeb;
+  padding: 16px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #555;
+  border-radius: 4px;
+  margin-left: 12px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.cta-button-secondary:hover {
+  border-color: #C9A84C;
+  color: #C9A84C;
+  background: rgba(201,168,76,0.05);
+}
+
+/* FLIPBOOK MODAL */
+.flipbook-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.flipbook-modal[hidden] { display: none; }
+.flipbook-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 8px 16px;
+  line-height: 1;
+  z-index: 1001;
+  transition: color 0.2s;
+}
+.flipbook-close:hover { color: #C9A84C; }
+.flipbook-frame {
+  width: 100%;
+  max-width: 1100px;
+  height: 90vh;
+  max-height: 800px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+.flipbook-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-inner {
@@ -344,4 +408,12 @@ a { color: #ebebeb; }
     width: 120px;
     height: 120px;
   }
+  .cta-button-secondary {
+    margin-left: 0;
+    margin-top: 12px;
+    display: block;
+    text-align: center;
+  }
+  .flipbook-modal { padding: 20px 12px; }
+  .flipbook-frame { height: 85vh; }
 }
