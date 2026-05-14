@@ -96,7 +96,8 @@ a { color: #ebebeb; }
   box-shadow: 0 8px 24px rgba(201,168,76,0.3);
 }
 .cta-meta {
-  margin-top: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 0.85rem;
   color: #888;
   letter-spacing: 0.03em;
@@ -324,7 +325,6 @@ a { color: #ebebeb; }
   text-decoration: none;
   border: 1px solid #555;
   border-radius: 4px;
-  margin-left: 12px;
   transition: border-color 0.2s, background 0.2s;
 }
 .cta-button-secondary:hover {
