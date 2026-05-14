@@ -23,8 +23,8 @@ export const onRequestGet: PagesFunction<{ PRINT_API_KEY: string; PRINT_API_BASE
     tryMatch('cover_material', (o: any) => o.slug.includes('250') && o.slug.includes('silk'));
     tryMatch('finish', (o: any) => o.slug.includes('mat') && o.slug.includes('lamination') && !o.slug.includes('soft'));
     tryMatch('binding', (o: any) => o.slug === 'wire_o' || o.slug.includes('wire'));
-    tryMatch('binding_edge', (o: any) => o.slug === 'left' || o.slug === 'links');
-    tryMatch('wire_o_color', (o: any) => o.slug === 'black');
+    tryMatch('binding_edge', (o: any) => o.slug === 'binding_left');
+    tryMatch('wire-o_color', (o: any) => o.slug === 'black');
     tryMatch('size', (o: any) => o.slug.includes('carre_l') || o.slug.includes('carré'));
     tryMatch('printtype', (o: any) => o.slug === '44');
 
