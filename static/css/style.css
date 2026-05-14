@@ -123,6 +123,23 @@ a { color: #ebebeb; }
   margin: 0 auto 60px;
   color: #d4d4d4;
 }
+.about-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 680px;
+  margin: 0 auto 48px;
+  color: #bbb;
+  line-height: 1.8;
+}
+.about-closing {
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #C9A84C;
+  margin-top: 56px;
+  letter-spacing: 0.01em;
+}
 .features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
