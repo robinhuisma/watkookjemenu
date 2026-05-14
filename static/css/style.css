@@ -125,7 +125,7 @@ a { color: #ebebeb; }
 }
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-top: 40px;
 }
