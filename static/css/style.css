@@ -195,6 +195,38 @@ a { color: #ebebeb; }
   transform: scale(1.04);
 }
 
+/* OVER ROBIN */
+.over-robin {
+  padding: 100px 0;
+  background: #1a1a1a;
+}
+.over-robin h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #fff;
+}
+.over-robin-body {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #bbb;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+.over-robin-body p {
+  margin-bottom: 1.4em;
+}
+.over-robin-sig {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: #C9A84C;
+  font-size: 1.15rem;
+  margin-top: 2em;
+}
+
 /* FINAL CTA */
 .final-cta {
   padding: 120px 24px;
