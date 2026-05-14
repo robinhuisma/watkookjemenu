@@ -1,0 +1,79 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-cover">
+      <img src="/images/cover.jpg" alt="Cover {{ .Site.Params.bookTitle }}" />
+    </div>
+    <div class="hero-text">
+      <h1>{{ .Site.Params.bookTitle }}</h1>
+      <p class="subtitle">{{ .Site.Params.bookSubtitle }}</p>
+      <p class="claim">{{ .Site.Params.bookClaim }}</p>
+      <a href="{{ .Site.Params.lemonSqueezyURL }}" class="cta-button">
+        Koop nu &mdash; &euro;{{ .Site.Params.price }}
+      </a>
+      <p class="cta-meta">Direct downloaden &middot; PDF + online flipbook</p>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <h2>Een kookboek voor wie doorzet.</h2>
+    <p class="lead">
+      Geen perfecte plaatjes. Geen weekendboodschappenlijst. Geen dogma's.
+      <strong>Wat kook je me nu?</strong> is een kookboek voor wie tijd
+      tekortkomt, alles geeft, en ook wil genieten.
+    </p>
+    <div class="features">
+      <div class="feature">
+        <h3>5-10 minuten werk</h3>
+        <p>Recepten kort in handeling, rijk in resultaat. Klein ritueel, groot effect.</p>
+      </div>
+      <div class="feature">
+        <h3>40+ recepten</h3>
+        <p>Ontbijten, lunches en diners. Plant forward, met flex voor alleseters.</p>
+      </div>
+      <div class="feature">
+        <h3>Echte ingredienten</h3>
+        <p>Geen suikerbommen, geen poeders. Smaken die je dag dragen.</p>
+      </div>
+      <div class="feature">
+        <h3>Slimme swaps</h3>
+        <p>Bij elk gerecht: variaties voor glutenvrij, veganistisch, extra eiwit, meer pit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="previews">
+  <div class="container">
+    <h2>Een kijkje in het boek.</h2>
+    <div class="preview-grid">
+      <figure>
+        <img src="/images/preview-10.jpg" alt="Recept-pagina" loading="lazy" />
+      </figure>
+      <figure>
+        <img src="/images/preview-30.jpg" alt="Avocado-citroen toast" loading="lazy" />
+      </figure>
+      <figure>
+        <img src="/images/preview-64.jpg" alt="Burrito bowl met mais en bonen" loading="lazy" />
+      </figure>
+      <figure>
+        <img src="/images/preview-110.jpg" alt="Oersoep" loading="lazy" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2>Klaar om door te koken?</h2>
+    <p>Direct downloaden. Vandaag eten dat werkt.</p>
+    <a href="{{ .Site.Params.lemonSqueezyURL }}" class="cta-button">
+      Koop nu &mdash; &euro;{{ .Site.Params.price }}
+    </a>
+  </div>
+</section>
+
+{{ end }}

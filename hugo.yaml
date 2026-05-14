@@ -1,0 +1,28 @@
+baseURL: "https://watkookjemenu.nl/"
+languageCode: "nl"
+title: "Wat kook je me nu?"
+theme: ""
+
+params:
+  description: "Een kookboek voor mensen die doorzetten. 40+ recepten in 5-10 minuten werk."
+  author: "Robin Huisma"
+  bookTitle: "Wat kook je me nu?"
+  bookSubtitle: "Je verwacht het niet. Eten dat werkt."
+  bookClaim: "Echte ingredienten. Veel smaak. Geen gedoe."
+  lemonSqueezyURL: "#koop"
+  price: "14,95"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+minify:
+  disableHTML: false
+  disableCSS: false
+  disableJS: false
+
+disableKinds:
+  - taxonomy
+  - term
+  - RSS

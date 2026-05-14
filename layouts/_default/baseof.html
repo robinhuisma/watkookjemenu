@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ .Site.Params.bookTitle }} -- {{ .Site.Params.bookSubtitle }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
+
+  <meta property="og:title" content="{{ .Site.Params.bookTitle }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/cover.jpg" />
+  <meta property="og:url" content="{{ .Site.BaseURL }}" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ .Site.Params.bookTitle }}" />
+  <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/cover.jpg" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+
+  <footer class="site-footer">
+    <p>&copy; 2026 {{ .Site.Params.author }} &middot; <a href="mailto:geniet@watkookjemenu.nl">geniet@watkookjemenu.nl</a></p>
+  </footer>
+</body>
+</html>
