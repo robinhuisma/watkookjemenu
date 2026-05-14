@@ -314,6 +314,19 @@ a { color: #ebebeb; }
 }
 .site-footer a { color: #888; }
 
+/* PRINT CTA */
+.cta-print {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #777;
+}
+.cta-print a {
+  color: #aaa;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cta-print a:hover { color: #C9A84C; }
+
 /* SECONDARY CTA */
 .cta-button-secondary {
   display: inline-block;

@@ -9,13 +9,17 @@
       <h1>{{ .Site.Params.bookTitle }}</h1>
       <p class="subtitle">{{ .Site.Params.bookSubtitle }}</p>
       <p class="claim">{{ .Site.Params.bookClaim }}</p>
-      <a href="{{ .Site.Params.lemonSqueezyURL }}" class="cta-button">
-        Download direct &mdash; &euro;{{ .Site.Params.price }}
+      <a href="{{ .Site.Params.digitalURL }}" class="cta-button">
+        Download direct &mdash; &euro;{{ .Site.Params.digitalPrice }}
       </a>
       <p class="cta-meta">PDF + online flipbook &middot; Meteen beschikbaar</p>
       <a href="#" class="cta-button-secondary" data-flipbook-trigger>
         Lees een proef &rarr;
       </a>
+      <p class="cta-print">
+        Liever een fysiek exemplaar?
+        <a href="{{ .Site.Params.printURL }}">Bestel het gedrukte boek &mdash; &euro;{{ .Site.Params.printPrice }}</a>
+      </p>
     </div>
   </div>
 </section>
@@ -102,9 +106,13 @@
     <div class="divider"></div>
     <h2>Begin met koken dat in je dag past.</h2>
     <p>Download direct en zet vandaag nog iets goeds op tafel.</p>
-    <a href="{{ .Site.Params.lemonSqueezyURL }}" class="cta-button">
-      Download direct &mdash; &euro;{{ .Site.Params.price }}
+    <a href="{{ .Site.Params.digitalURL }}" class="cta-button">
+      Download direct &mdash; &euro;{{ .Site.Params.digitalPrice }}
     </a>
+    <p class="cta-print" style="margin-top:16px;">
+      Liever een fysiek exemplaar?
+      <a href="{{ .Site.Params.printURL }}">Bestel het gedrukte boek &mdash; &euro;{{ .Site.Params.printPrice }}</a>
+    </p>
   </div>
 </section>
 

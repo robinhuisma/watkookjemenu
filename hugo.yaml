@@ -8,8 +8,10 @@ params:
   bookTitle: "Wat kook je me nu?"
   bookSubtitle: "Voor dagen waarop goed eten simpel moet zijn."
   bookClaim: "Snelle recepten. Pure ingredienten. Veel smaak. Zonder ingewikkeld koken of eindeloos plannen."
-  lemonSqueezyURL: "#koop"
-  price: "14,95"
+  digitalURL: "https://watkookjemenu.lemonsqueezy.com/checkout/buy/17b8b95f-e19e-4368-a7ad-75a11e68b6ea"
+  printURL: "https://watkookjemenu.lemonsqueezy.com/checkout/buy/8e3eee89-305b-4249-9a8d-6ed44f71f6d5"
+  digitalPrice: "14,95"
+  printPrice: "39,00"
   previewFlipbookURL: "https://heyzine.com/flip-book/5911ff88c4.html"
   recipeCount: 47
 
