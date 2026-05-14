@@ -19,8 +19,8 @@
 
 <section class="about">
   <div class="container">
-    <div class="divider"></div>
-    <h2>Een kookboek voor wie doorzet.</h2>
+    <div class="divider fade-in"></div>
+    <h2 class="fade-in">Een kookboek voor wie doorzet.</h2>
     <p class="lead">
       Geen perfecte plaatjes. Geen weekendboodschappenlijst. Geen dogma's.
       <strong>Wat kook je me nu?</strong> is een kookboek voor wie tijd
@@ -45,6 +45,10 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="pullquote">
+  <blockquote class="fade-in">Koken is geen taak. Het is een ritueel.</blockquote>
 </section>
 
 <section class="previews">
@@ -78,5 +82,12 @@
     </a>
   </div>
 </section>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 {{ end }}
