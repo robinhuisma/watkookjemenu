@@ -202,7 +202,7 @@ a { color: #ebebeb; }
 }
 .robin-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 56px;
   align-items: start;
   max-width: 900px;
@@ -213,8 +213,8 @@ a { color: #ebebeb; }
   top: 60px;
 }
 .robin-photo img {
-  width: 280px;
-  height: 280px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(201,168,76,0.1);
@@ -341,7 +341,7 @@ a { color: #ebebeb; }
   }
   .robin-photo img {
     margin: 0 auto;
-    width: 220px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
   }
 }
