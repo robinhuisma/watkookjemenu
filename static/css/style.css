@@ -21,11 +21,10 @@ a { color: #ebebeb; }
 
 /* HERO */
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 24px;
+  padding: 60px 24px;
   background: #0d0d0d;
 }
 .hero-inner {
