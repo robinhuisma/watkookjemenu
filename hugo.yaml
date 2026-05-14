@@ -1,7 +1,6 @@
 baseURL: "https://watkookjemenu.nl/"
 languageCode: "nl"
 title: "Wat kook je me nu?"
-theme: ""
 
 params:
   description: "Een kookboek voor mensen die doorzetten. 40+ recepten in 5-10 minuten werk."
