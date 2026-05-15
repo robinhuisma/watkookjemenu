@@ -4,6 +4,20 @@ pages_build_output_dir = "public"
 
 [vars]
 SITE_URL = "https://watkookjemenu.nl"
+LS_STORE_ID = "374728"
+PDF_URL = "https://pub-d3210ebf8a274ed391936ec891d76b03.r2.dev/wkjmn-x7q3hp.pdf"
+PRINT_API_BASE = "https://api.print.com"
+PRINT_VARIANT_ID = "1654683"
+BILLING_FIRSTNAME = "Robin"
+BILLING_LASTNAME = "Huisma"
+BILLING_CITY = "Leusden"
+BILLING_POSTCODE = "3831EH"
+BILLING_STREET = "Dalmatie 64"
+BILLING_EMAIL = "geniet@watkookjemenu.nl"
+BILLING_COUNTRY = "NL"
+BILLING_COMPANY = "Harmony Health Holding BV"
+BILLING_VATNR = "NL867310790B01"
+BILLING_PHONE = "0641786468"
 
 [[kv_namespaces]]
 binding = "PRINT_ORDER_DEDUPE"
