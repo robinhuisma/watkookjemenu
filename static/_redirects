@@ -1,1 +1,2 @@
-/koop /koop/print/ 301
+/koop/print/* / 301
+/koop/* / 301
