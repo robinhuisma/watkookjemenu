@@ -7,5 +7,5 @@ SITE_URL = "https://watkookjemenu.nl"
 
 [[kv_namespaces]]
 binding = "PRINT_ORDER_DEDUPE"
-id = "9d4286a45f2a40678b8b0ee86c34a291"
+id = "d2a4b4a757544dc5aa2f106f83fcf0c2"
 preview_id = "7408ce4571d24f2986eae57ee1a8ada7"
