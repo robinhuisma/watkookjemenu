@@ -67,7 +67,7 @@
         </div>
       </fieldset>
 
-      <div id="form-error" class="form-error" hidden></div>
+      <div id="form-error" class="form-error" role="alert" aria-live="polite" hidden></div>
 
       <button type="submit" class="cta-button" id="submit-btn">
         Naar betaling &rarr;
@@ -125,7 +125,10 @@
       body: JSON.stringify(data)
     })
     .then(function (res) {
-      return res.json().then(function (body) {
+      // V9: Guard against non-JSON response (network error pages, CF errors)
+      return res.text().then(function (text) {
+        var body = {};
+        try { body = JSON.parse(text); } catch (_) {}
         return { ok: res.ok, body: body };
       });
     })
@@ -144,9 +147,11 @@
   function showError(msg) {
     errorBox.textContent = msg;
     errorBox.hidden = false;
+    // V8: Focus error box for screen readers
+    errorBox.setAttribute('tabindex', '-1');
+    errorBox.focus();
     submitBtn.disabled = false;
     submitBtn.textContent = 'Naar betaling \u2192';
-    errorBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 })();
 </script>

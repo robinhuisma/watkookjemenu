@@ -1,0 +1,11 @@
+name = "watkookjemenu"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "public"
+
+[vars]
+SITE_URL = "https://watkookjemenu.nl"
+
+[[kv_namespaces]]
+binding = "PRINT_ORDER_DEDUPE"
+id = "9d4286a45f2a40678b8b0ee86c34a291"
+preview_id = "7408ce4571d24f2986eae57ee1a8ada7"
