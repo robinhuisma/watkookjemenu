@@ -83,6 +83,19 @@
 </section>
 
 <script>
+// Restore previously entered values from localStorage
+(function() {
+  try {
+    var saved = localStorage.getItem('wkjmn_checkout');
+    if (!saved) return;
+    var data = JSON.parse(saved);
+    Object.keys(data).forEach(function(key) {
+      var el = document.querySelector('[name="' + key + '"]');
+      if (el && !el.value) el.value = data[key];
+    });
+  } catch (e) {}
+})();
+
 (function () {
   var form = document.getElementById('print-checkout-form');
   var submitBtn = document.getElementById('submit-btn');
@@ -118,6 +131,22 @@
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Even geduld\u2026';
+
+    // Save form data to localStorage so it survives a failed redirect or tab refresh
+    try {
+      var formData = {
+        firstName: form.firstName.value,
+        lastName:  form.lastName.value,
+        email:     form.email.value,
+        phone:     form.phone.value,
+        company:   form.company.value,
+        street:    form.street.value,
+        postcode:  form.postcode.value,
+        city:      form.city.value,
+        country:   form.country.value
+      };
+      localStorage.setItem('wkjmn_checkout', JSON.stringify(formData));
+    } catch (e) {}
 
     fetch('/api/create-print-checkout', {
       method: 'POST',
