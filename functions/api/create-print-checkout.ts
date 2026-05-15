@@ -96,6 +96,18 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   }
 
   // Build Lemon Squeezy checkout payload (custom values must all be strings per LS docs)
+  const customData: Record<string, string> = {
+    firstName:  String(firstName  ?? ''),
+    lastName:   String(lastName   ?? ''),
+    phone:      String(phone      ?? ''),
+    company:    String(company    ?? ''),
+    street:     String(street     ?? ''),
+    postcode:   String(postcode   ?? ''),
+    city:       String(city       ?? ''),
+    country:    String(country    ?? ''),
+    variant:    'print'
+  };
+
   const lsBody = {
     data: {
       type: 'checkouts',
@@ -103,17 +115,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         checkout_data: {
           email,
           name: `${firstName} ${lastName}`,
-          custom: {
-            firstName,
-            lastName,
-            phone,
-            company,
-            street,
-            postcode,
-            city,
-            country,
-            variant: 'print'
-          }
+          custom: customData
         },
         product_options: {
           // V10: use SITE_URL env var instead of hardcoded domain
