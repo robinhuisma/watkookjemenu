@@ -35,6 +35,16 @@ function clean(value: unknown, max = 120): string {
     .slice(0, max);
 }
 
+function buildCustomData(input: Record<string, unknown>): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(input)) {
+    if (v === null || v === undefined) continue;
+    const s = String(v).trim();
+    if (s.length > 0) out[k] = s;
+  }
+  return out;
+}
+
 function validatePostcode(postcode: string, country: string): boolean {
   if (country === 'NL') return /^[1-9][0-9]{3} ?[A-Za-z]{2}$/.test(postcode);
   if (country === 'BE') return /^[1-9][0-9]{3}$/.test(postcode);
@@ -96,17 +106,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   }
 
   // Build Lemon Squeezy checkout payload (custom values must all be strings per LS docs)
-  const customData: Record<string, string> = {
-    firstName:  String(firstName  ?? ''),
-    lastName:   String(lastName   ?? ''),
-    phone:      String(phone      ?? ''),
-    company:    String(company    ?? ''),
-    street:     String(street     ?? ''),
-    postcode:   String(postcode   ?? ''),
-    city:       String(city       ?? ''),
-    country:    String(country    ?? ''),
-    variant:    'print'
-  };
+  const customData = buildCustomData({
+    firstName, lastName, phone, company, street, postcode, city, country, variant: 'print'
+  });
 
   const lsBody = {
     data: {
